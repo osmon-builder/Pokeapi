@@ -10,7 +10,6 @@ import { AllPokemons, Pokemon } from '../interfaces/pokemons.interfaces';
 })
 export class PokemonService {
 
-  private baseUrl = 'https://pokeapi.co/api/v2/';
 
   constructor( 
     private http: HttpClient
@@ -24,7 +23,7 @@ export class PokemonService {
 
 
 getPokemonDetail(pokemon: number | string): Observable<PokemonDetail> {
-  return this.http.get<PokemonDetail>(this.baseUrl + 'pokemon/' + pokemon);
+    return this.http.get<PokemonDetail>(`${environment.BaseURL}/pokemon/${pokemon}`);
 }
 
 
