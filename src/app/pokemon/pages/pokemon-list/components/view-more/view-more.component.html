@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>{{pokemon.name}}</h1>
+<div mat-dialog-content>
+  <div>
+    <img style="justify-content: center" [src]="pokemon.sprites?.front_default" [alt]="pokemon.name">
+    <div>
+      <strong></strong>
+      <div>
+        <li>
+          Abilities: {{getAbilities()}}
+        </li>
+        <li>
+          height: {{pokemon.height}}
+        </li>
+        <li>
+          weight: {{pokemon.weight}}
+        </li>
+      </div>
+    </div>
+  </div>
